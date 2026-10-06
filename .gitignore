@@ -1,0 +1,24 @@
+# Build output
+bin/
+obj/
+*.user
+*.suo
+.vs/
+*.sln.docstates
+
+# Release artefacts
+dist/
+*.zip
+*.runtimeconfig.json
+
+# Temporary logs & test artifacts
+*.log
+*.scr
+*.ifc
+*.dwg
+debug_trace*.log
+exports_*.txt
+
+# Setup executables in root
+Plant3D_IfcExporter_Setup.*
+DWG2IFC-Setup.*

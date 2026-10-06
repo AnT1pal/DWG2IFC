@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ApplicationPackage
+    SchemaVersion="1.0"
+    AutodeskProduct="AutoCAD"
+    ProductType="Application"
+    Name="DWG2IFC (AutoCAD &amp; Plant 3D IFC Exporter)"
+    Description="Выгрузка 3D моделей AutoCAD и технологических трубопроводов Plant 3D в открытый формат IFC4/IFC2x3"
+    AppVersion="1.0.0"
+    Author="baidurovlabs.ru"
+    ProductCode="{B75DE640-1A84-48FE-95C8-8547287901F2}"
+    UpgradeCode="{33BC1842-570D-47C7-9411-4704381C9F44}"
+    Icon="./Contents/icon32.png">
+
+  <CompanyDetails
+      Name="baidurovlabs.ru"
+      Url="https://baidurovlabs.ru"
+      Email="support@baidurovlabs.ru" />
+
+  <!-- AutoCAD & Plant 3D 2025-2026 (.NET 8) -->
+  <Components Description="AutoCAD and Plant 3D 2025-2026">
+    <RuntimeRequirements
+        OS="Win64"
+        Platform="AutoCAD*"
+        SeriesMin="R25.0"
+        SeriesMax="R26.0" />
+
+    <ComponentEntry
+        AppName="DWG2IFC"
+        Version="1.0.0"
+        ModuleName="./Contents/net8.0/DWG2IFC.dll"
+        AppDescription="IFC Exporter for AutoCAD and AutoCAD Plant 3D"
+        LoadOnAutoCADStartup="True"
+        LoadOnAppearance="True"
+        LoadOnCommandInvocation="True">
+      <Commands GroupName="DWG2IFC">
+        <Command Global="DWG2IFC" Local="DWG2IFC" />
+        <Command Global="IFCEXPORT" Local="IFCEXPORT" />
+        <Command Global="PLANTTOIFC" Local="PLANTTOIFC" />
+        <Command Global="IFCEXPORT_PLANT" Local="IFCEXPORT_PLANT" />
+        <Command Global="IFCRIBBON" Local="IFCRIBBON" />
+      </Commands>
+    </ComponentEntry>
+  </Components>
+</ApplicationPackage>
